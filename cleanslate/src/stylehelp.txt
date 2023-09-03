@@ -1,0 +1,37 @@
+# Design System:
+
+--black: rgb(0, 0, 0);
+--dark-purple: hsla(225, 7%, 79%, 1);
+--medium-purple: hsla(72, 7%, 20%, 1);
+--light-purple: hlsa(233, 30%, 21%);
+--white-text: rgb(255, 255, 255);
+
+--light-gray: rgb(223, 227, 250);
+--medium-gray: rgb(136, 142, 176);
+
+--red: hsl(0%, 80%, 63%);
+--light-orange: hsl(0, 100%, 80%);
+
+--light-bg: rgb(248, 248, 251);
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+font-family: 'Playfair Display', serif;
+
+
+# Heading Large
+--heading-L-fs: 36px;
+--heading-L-line-height: 33px;
+--heading-L-letter-spacing: -1px;
+
+
+# Heading medium
+--heading-M-fs: 24px;
+--heading-M-line-height: 22px;
+--heading-M-letter-spacing: -0.75px;
+
+# Heading Small
+--heading-S-fs: 15px;
+--heading-S-line-height: 15px;
+--heading-S-letter-spacing: -0.25px;

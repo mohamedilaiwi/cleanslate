@@ -1,0 +1,16 @@
+@import '../../../typography/typo.css';
+
+
+.SideNav-Wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    background: var(--black);
+    padding: 2rem 5rem;
+}
+
+.SideNav-Links-Wrapper {
+    display: flex;
+    gap: 2rem;
+    color: white;
+}
