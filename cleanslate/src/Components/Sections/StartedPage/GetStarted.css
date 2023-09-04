@@ -1,0 +1,112 @@
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000D;
+}
+
+.background-circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 2px;
+    height: 2px;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 15rem;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #5e5368 74%);
+}
+  
+
+.horizontal-line {
+    height: 1px;
+    width: 15rem;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #5e5368 74%, #000000 0%);
+  }
+  
+  .frame-one-horizontal {
+    position: absolute;
+    top: 13rem;
+    left: 5rem;
+  }
+  
+  .frame-one-vertical {
+    position: absolute;
+    top: 10rem;
+    left: 10rem;
+  }
+  
+
+  /* Everything now is the card and text */
+.card-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    padding-bottom: 10rem;
+}
+
+.form-container {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+.form-input {
+    padding: 0.9rem 1.75rem;
+    background: transparent;
+    border: 1px solid rgb(38, 38, 44);
+    border-radius: 8px;
+    font-family: "Times New Roman";
+    font-weight: 400;
+    letter-spacing: -0.006rem;    
+}
+
+.form-submit {
+    padding: 0.9rem 1.75rem;
+    background: rgb(38, 38, 44);
+    border: none;
+    border-radius: 8px;
+    color: gray;
+}
+
+#form-image {
+    position: absolute;
+    top: 12px;
+    left: 12px
+}
+
+
+
+.card-container .card-header {
+    color: white;
+    padding-bottom: 2rem;
+    font-size: 48px;
+    max-width: 30rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

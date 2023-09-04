@@ -35,3 +35,7 @@
     background: var(--medium-gray);
 }
 
+
+.Dashboard-Selected {
+    height: 34.5rem;
+}

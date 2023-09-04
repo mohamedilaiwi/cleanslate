@@ -13,15 +13,8 @@ const SubContentPage = ({media}) => {
         const endpointURL = getEndPoint(media.name);
         
         try {
-            // const data = {media: media.name, handler: message}
-            // fetch(endpointURL, {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify(data)
-            // });
             setDisplayHistory(true);
+            console.log(document.querySelectorAll('.PostBox'));
         } catch (error) {
             console.error('Error:', error);
         }
@@ -77,8 +70,11 @@ const DisplayPostHistory = ({name, postHistory}) => {
                 <p>Date Posted</p>
                 <p>Content</p>
             </div>
-            {postHistory.map((item) => {
-                return <div key={item.id} className="PostBox">
+            {postHistory.map((item, index) => {
+                return <div key={item.id} 
+                            className={`PostBox fade-in`}
+                            style={{ animationDelay: `${index * 0.3}s` }}
+                        >
                     <div>
                         <div className="circle blink_me"></div>
                         <p id="post-subreddit">{item.subreddit}</p>

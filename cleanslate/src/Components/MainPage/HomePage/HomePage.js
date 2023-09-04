@@ -1,4 +1,5 @@
 import './HomePage.css'
+import { SideNav } from '../SideNav/SideNav'
 import { particlesOptions } from "../../../utils/particlesOptions"; // Import the particlesOptions object
 import homeLoading from '../../../images/homeLoading.gif'
 import {  useCallback } from 'react';
@@ -12,6 +13,7 @@ const HomePage = ({setSelectedService}) => {
     
     return (
         <div className='HomePage-Wrapper'>
+            <SideNav />
             <IntroSection />
             <ServicesSection setSelectedService={setSelectedService}/>
         </div>
@@ -28,6 +30,10 @@ const IntroSection = () => {
         await loadSlim(engine);
     }, []);
 
+    // Deals with click on get started
+    const handleClick = () => {
+        
+    }
 
     return (
         <div className='IntroSection'>
@@ -35,7 +41,9 @@ const IntroSection = () => {
                 <div className='Text-Container'>
                     <h1 id='text-header'>Remove Your Digital Footprint</h1>
                     <p id='text-subheading'>Polish Your Online Image: Our service empowers you to effortlessly sweep away controversial or disputed comments that could impact your digital footprint. Present yourself professionally with a pristine social media history.</p>
-                    <button id='start-btn'>Get Started</button>
+                    <Link to="/get-started">
+                        <button id='start-btn'>Get Started</button>
+                    </Link>
                 </div>
                 <img src={homeLoading} alt='computer' id='computer-intro'/>
             </div>

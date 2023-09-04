@@ -70,7 +70,7 @@
     display: flex;
     flex-direction: column;
     gap: 1px;
-    background: gray;
+    background: rgb(40,40,40);
     margin-top: 5rem;
 }
 
@@ -78,13 +78,16 @@
     background: rgb(40,40,40);
     display: grid;
     grid-template-columns: 8rem 8.5rem auto;
-    padding-left: 10px;
+    padding-left: 35px;
     font-weight: bold;
     color: white;
+    height: 3rem;
+    align-items: center;
+    border: 1px solid white;
 }
 
 .PostBox {
-    background: rgb(40,40,40);
+    border-bottom: 1px solid lightgray;
     height: 4rem;
     display: grid;
     grid-template-columns: 9rem 8rem auto;
@@ -94,6 +97,8 @@
     font-weight: 400;
     font-family: "Times New Roman";
     padding: 5px;
+    padding-left: 30px;
+
 }
 
 .PostBox div:first-child {
@@ -113,10 +118,26 @@
 .blink_me {
     animation: blinker 3s linear infinite;
 }
+
+.fade-in {
+    opacity: 0;
+    animation: FadeIn 0.5s ease; /* Adjust the duration and timing function as needed */
+    animation-fill-mode: forwards; /* Keep the final animation state */
+ 
+}
+
   
 @keyframes blinker {
     50% {
       opacity: 0;
+    }
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
     }
 }
 
