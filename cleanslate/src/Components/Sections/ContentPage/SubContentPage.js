@@ -2,10 +2,30 @@ import {SideDashboard} from "../Dashboard/Dashboard";
 import { useState } from 'react';
 import searchImg from '../../../images/search.svg'
 import './SubContentPage.css';
-
+import { getEndPoint } from "../../../utils/utils";
+import exampleTestData from "../../../utils/exampleTestData";
 
 const SubContentPage = ({media}) => {
     const [userInput, setUserInput] = useState('');
+    const [displayHistory, setDisplayHistory] = useState(false);
+
+    const sendSearchRequest = async (message) => {
+        const endpointURL = getEndPoint(media.name);
+        
+        try {
+            // const data = {media: media.name, handler: message}
+            // fetch(endpointURL, {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify(data)
+            // });
+            setDisplayHistory(true);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
 
     const handleInputChange = (e) => {
         setUserInput(e.target.value);
@@ -14,7 +34,7 @@ const SubContentPage = ({media}) => {
     const handleSubmit = () => {
         const searchBar = document.querySelector('.SearchBar-Container');
         searchBar.classList.add("hide");
-        console.log('User input:', userInput);
+        sendSearchRequest(userInput);
     }
 
 
@@ -28,6 +48,7 @@ const SubContentPage = ({media}) => {
                     onChange={handleInputChange}
                     onSubmit={handleSubmit}
                 />
+                {displayHistory && <DisplayPostHistory name={userInput} postHistory={exampleTestData}/>}
             </div>
         </div>
     )
@@ -44,6 +65,28 @@ const SearchBar = ({value, onChange, onSubmit}) => {
                 onChange={onChange}
             />
             <button onClick={onSubmit}><img src={searchImg} alt='' id='search-image'/></button>
+        </div>
+    )
+}
+
+const DisplayPostHistory = ({name, postHistory}) => {
+    return (
+        <div className='PostHistory-Wrapper'>
+            <div className="PostHistory-Header">
+                <p>Subreddit</p>
+                <p>Date Posted</p>
+                <p>Content</p>
+            </div>
+            {postHistory.map((item) => {
+                return <div key={item.id} className="PostBox">
+                    <div>
+                        <div className="circle blink_me"></div>
+                        <p id="post-subreddit">{item.subreddit}</p>
+                    </div>
+                    <p id="post-date">{item.date}</p>
+                    <p id="post-description">{name}: {item.description}</p>
+                </div>
+            })}
         </div>
     )
 }

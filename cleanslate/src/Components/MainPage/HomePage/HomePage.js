@@ -14,7 +14,6 @@ const HomePage = ({setSelectedService}) => {
         <div className='HomePage-Wrapper'>
             <IntroSection />
             <ServicesSection setSelectedService={setSelectedService}/>
-            <AboutSection />
         </div>
     )
 };

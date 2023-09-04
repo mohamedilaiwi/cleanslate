@@ -9,10 +9,10 @@
 }
 
 .Dashboard-Wrapper {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 15rem;
+    width: 12rem;
     height: 100vh;
     text-align: center;
     background: rgb(32,32,32);

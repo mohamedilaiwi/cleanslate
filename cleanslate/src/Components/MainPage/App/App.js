@@ -18,8 +18,6 @@ function App() {
           entry.target.classList.remove('show');
         }
       })
-
-      fetch("/api").then((res) => res.json()).then((data) => console.log(data.message));
     })
 
     const hiddenElements = document.querySelectorAll('.hidden');
